@@ -56,7 +56,7 @@ const MobileHeader = ({ page = "main", heading, arrowShow }: MobileHeader) => {
                 <div>
                   <ArrowLeftIcon
                     onClick={() => {
-                      router.push("/");
+                      router.push("/home");
                     }}
                   />
                 </div>

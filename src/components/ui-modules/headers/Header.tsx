@@ -10,23 +10,30 @@ const iconsList = [
     label: "Profile",
     icon: "/icons/user.png",
     h: 20,
+    router: "/cart",
+
     w: 21,
   },
   {
     label: "Messages",
     icon: "/icons/messages.png",
+    router: "/cart",
+
     h: 21,
     w: 21,
   },
   {
     label: "Order",
     icon: "/icons/like.png",
+    router: "/cart",
+
     h: 19,
     w: 21,
   },
   {
     label: "My cart",
     icon: "/icons/cart.png",
+    router: "/cart",
     h: 22,
     w: 21,
   },
@@ -64,13 +71,15 @@ function Header() {
             className="mx-5 flex flex-col gap-2 items-center justify-center"
             key={i}
           >
-            <Image
-              src={icon.icon}
-              alt={icon.label}
-              width={icon.w}
-              height={icon.h}
-            />
-            <p className="text-xs">{icon.label}</p>
+            <Link href={icon.router}>
+              <Image
+                src={icon.icon}
+                alt={icon.label}
+                width={icon.w}
+                height={icon.h}
+              />
+              <p className="text-xs">{icon.label}</p>
+            </Link>
           </div>
         ))}
       </div>

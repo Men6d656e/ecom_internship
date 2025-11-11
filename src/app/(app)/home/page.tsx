@@ -3,6 +3,8 @@ import {
   HomeProductData,
   TechProductData,
 } from "@/app/const/staticData";
+import Header from "@/components/ui-modules/headers/Header";
+import MobileHeader from "@/components/ui-modules/headers/mobile-headers/main-page-header";
 import CopyRight from "@/components/ui-modules/main-page/copy-right";
 import ExtraServicesSection from "@/components/ui-modules/main-page/extra-services";
 import Footer from "@/components/ui-modules/main-page/footer";
@@ -14,19 +16,22 @@ import SuplaierByRegions from "@/components/ui-modules/main-page/suplier-by-refi
 
 const HomePage = () => {
   return (
-    <div className="w-full overflow-x-hidden">
-      {/* <ShowCaseSection
+    <>
+      <Header />
+      <MobileHeader />
+      <div className="w-full overflow-x-hidden">
+        {/* <ShowCaseSection
         type="deals"
         button={false}
         heading="Deals and offers"
         paragraph="Hygiene equipments"
         items={DealsAndOffersData}
-      />
+        />
       <br />
       <br />
       <ShowCaseSection
-        type="home"
-        titleImage="/Image/2.png"
+      type="home"
+      titleImage="/Image/2.png"
         button={true}
         heading="Home and Outdoor"
         items={HomeProductData}
@@ -40,30 +45,31 @@ const HomePage = () => {
         heading="Consumer Electronics and gadgets"
         items={TechProductData}
       /> */}
-      <br />
-      <br />
+        <br />
+        <br />
 
-      <SuplaierForm />
-      <br />
-      <br />
-      <RecomemdedItems />
-      <br />
-      <br />
-      <ExtraServicesSection />
-      <br />
-      <br />
-      <SuplaierByRegions />
-      <br />
-      <br />
-      <Subscribe />
-      <br />
-      <br />
-      <Footer />
-      <br />
-      <br />
+        <SuplaierForm />
+        <br />
+        <br />
+        <RecomemdedItems />
+        <br />
+        <br />
+        <ExtraServicesSection />
+        <br />
+        <br />
+        <SuplaierByRegions />
+        <br />
+        <br />
+        <Subscribe />
+        <br />
+        <br />
+        <Footer />
+        <br />
+        <br />
 
-      <CopyRight />
-    </div>
+        <CopyRight />
+      </div>
+    </>
   );
 };
 

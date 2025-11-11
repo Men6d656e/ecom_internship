@@ -7,11 +7,5 @@ export default function HomeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div>
-      <Header />
-      <MobileHeader />
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 }
